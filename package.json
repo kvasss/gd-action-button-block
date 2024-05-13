@@ -1,0 +1,26 @@
+{
+  "name": "gd-action-button-block",
+  "version": "0.2.0",
+  "description": "action-button block",
+  "author": "GD",
+  "license": "GPL-2.0-or-later",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "wp-scripts start --webpack-copy-php",
+    "build": "wp-scripts build --webpack-copy-php",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "makepot": "wp i18n make-pot --slug=gd-action-button --domain=gd-action-button --exclude='node_modules,vendor,assets,src' . languages/gd-action-button.pot",
+    "make-json": "wp i18n make-json languages/ --no-purge",
+    "release": "npm run build && npm run makepot && npm run make-json && npm run plugin-zip"
+  },
+  "devDependencies": {
+    "@wordpress/block-editor": "^12.25.0",
+    "@wordpress/i18n": "^4.57.0",
+    "@wordpress/plugins": "^6.25.0",
+    "@wordpress/scripts": "^27.8.0",
+    "html-react-parser": "^5.1.10"
+  }
+}

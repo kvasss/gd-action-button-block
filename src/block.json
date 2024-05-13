@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "gd/action-button",
+	"title": "Action button",
+	"textdomain": "dynamic-grid",
+	"category": "gd-components",
+	"keywords": [ "action", "button", "link" ],
+	"attributes": {
+		"content": {
+			"type": "string"
+		},
+		"tagName": {
+			"type": "string",
+			"default": "button"
+		},
+		"linkUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"linkTarget": {
+			"type": "string",
+			"default": "_self"
+		},
+
+		"action": {
+			"type": "string",
+			"default": "custom"
+		},
+		"actionParams": {
+			"type": "string",
+			"default": ""
+		},
+
+		"prefix": {
+			"type": "string",
+			"default": ""
+		},
+		"suffix": {
+			"type": "string",
+			"default": ""
+		},
+		"ssr": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"usesContext": [
+		"postId",
+		"postType",
+		"storeType",
+		"id"
+	],
+	"supports": {
+		"html": true,
+		"color": {
+			"button": true,
+			"link": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"viewScript": "file:./view.js",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

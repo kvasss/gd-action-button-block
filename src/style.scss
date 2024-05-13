@@ -1,0 +1,15 @@
+.wp-block-gd-action-button:where(:not(.is-style-default)) {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+
+	&:where(:not([style*="text-decoration"])) {
+		text-decoration: none;
+
+		&:focus,
+		&:active {
+			text-decoration: none;
+		}
+	}
+}
