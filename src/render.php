@@ -8,8 +8,8 @@
   $context       = $block->context;
   $ssr           = isset($attributes['ssr']) ? $attributes['ssr'] : false;
 
-  if (!function_exists('render_button')) {
-    function render_button($attributes) {
+  if (!function_exists('gd_render_action_button')) {
+    function gd_render_action_button($attributes) {
       $attrs_content      = isset($attributes['content']) ? $attributes['content'] : null;
       $justify_class_name = isset( $attributes['justifyContent'] ) ? "is-justified-{$attributes['justifyContent']}" : '';
       $wrapper_attributes = get_block_wrapper_attributes( array( 'class' => $justify_class_name ) );
@@ -58,8 +58,8 @@
         echo wp_json_encode($context);
       } ?>
     </pre>
-    <?php render_button($attributes); ?>
+    <?php gd_render_action_button($attributes); ?>
   </div>
 <?php } else {
-  render_button($attributes);
+  gd_render_action_button($attributes);
 } ?>
