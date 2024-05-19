@@ -13,7 +13,7 @@ import SettingsControls from './components/SettingsControls';
 import ActionsControls from './components/ActionsControls';
 
 export default function Edit({ attributes, setAttributes, context }) {
-  // console.log(props);
+  // eslint-disable-next-line no-unused-vars
   const { content, tagName: TagName, prefix, suffix, ssr } = attributes;
 
   const blockProps = useBlockProps();

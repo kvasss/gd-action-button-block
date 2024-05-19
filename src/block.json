@@ -43,7 +43,16 @@
 		"ssr": {
 			"type": "boolean",
 			"default": true
-		}
+		},
+    "attrs": {
+      "type": "array",
+      "default" : [
+        {
+          "attr": "",
+          "value": ""
+        }
+      ]
+    }
 	},
 	"usesContext": [
 		"postId",
